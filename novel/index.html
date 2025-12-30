@@ -102,33 +102,29 @@
 </main>
 
 <script>
-document.querySelectorAll(".toggle-btn").forEach(btn => {
-  btn.addEventListener("click", () => {
-    const target = document.getElementById(btn.dataset.target);
-    const isOpen = target.classList.toggle("open");
-    btn.textContent = (isOpen ? "▼" : "▶") + " 話数一覧";
-  });
+document.addEventListener("scroll", () => {
+  const topBtn = document.getElementById("backToTop");
+  const homeBtn = document.getElementById("backToHome");
+
+  if (window.scrollY > 200) {
+    topBtn.classList.add("show");
+    homeBtn.classList.add("show");
+  } else {
+    topBtn.classList.remove("show");
+    homeBtn.classList.remove("show");
+  }
+});
+
+// Top ボタン
+document.getElementById("backToTop").addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// Home ボタン（index.html へ戻る）
+document.getElementById("backToHome").addEventListener("click", () => {
+  window.location.href = "../index.html";
 });
 </script>
-
-<button id="backToHome">← Home</button>
-<button id="backToTop">▲ Top</button>
-
-  <script>
-    document.addEventListener("scroll", () => {
-      const btn = document.getElementById("backToTop");
-      if (window.scrollY > 200) {
-        btn.classList.add("show");
-      } else {
-        btn.classList.remove("show");
-      }
-    });
-
-    document.getElementById("backToTop").addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  </script>
-
 </body>
 </html>
 
