@@ -1,0 +1,85 @@
+/* ベース ------------------------------------------------- */
+body {
+  margin: 0;
+  padding: 0;
+  background: #fafafa;
+  color: #222;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+               "Segoe UI", "Hiragino Sans", "Noto Sans JP", sans-serif;
+  text-align: center;
+}
+
+.page-title {
+  margin: 60px 0 30px;
+  font-size: 2.2rem;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+/* 章ブロック --------------------------------------------- */
+.novel-container {
+  width: min(90%, 800px);
+  margin: 0 auto 80px;
+}
+
+.chapter-block {
+  padding: 26px 0 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(160,130,70,0.28); /* 金の薄ライン */
+}
+
+.chapter-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 18px;
+  letter-spacing: 0.04em;
+}
+
+.summary {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #444;
+  margin-bottom: 18px;
+}
+
+/* ボタン -------------------------------------------------- */
+.toggle-btn {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  color: #444;
+  cursor: pointer;
+  padding: 4px 0;
+  margin-bottom: 14px;
+}
+
+.toggle-btn:hover {
+  color: #222;
+}
+
+/* 話数リスト --------------------------------------------- */
+.episode-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: none;
+}
+
+.episode-list.open {
+  display: block;
+}
+
+.episode-list li {
+  margin: 10px 0;
+}
+
+.episode-list a {
+  text-decoration: none;
+  color: #555;
+  font-size: 0.96rem;
+  letter-spacing: 0.02em;
+}
+
+.episode-list a:hover {
+  color: #111;
+}
