@@ -102,6 +102,18 @@
 </main>
 
 <script>
+// ▼▼ アコーディオン（章・話数の開閉） ▼▼
+document.querySelectorAll(".toggle-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const target = document.getElementById(btn.dataset.target);
+    if (!target) return;
+
+    const isOpen = target.classList.toggle("open");
+    btn.textContent = (isOpen ? "▼" : "▶") + " 話数一覧";
+  });
+});
+
+// ▼▼ スクロール時ボタン表示 ▼▼
 document.addEventListener("scroll", () => {
   const topBtn = document.getElementById("backToTop");
   const homeBtn = document.getElementById("backToHome");
@@ -115,16 +127,17 @@ document.addEventListener("scroll", () => {
   }
 });
 
-// Top ボタン
+// ▼▼ TOPへ戻る ▼▼
 document.getElementById("backToTop").addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// Home ボタン（index.html へ戻る）
+// ▼▼ HOMEへ戻る ▼▼
 document.getElementById("backToHome").addEventListener("click", () => {
   window.location.href = "../index.html";
 });
 </script>
+
 </body>
 </html>
 
