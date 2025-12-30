@@ -1,52 +1,96 @@
-/* 全体のベース */
+/* ======== 全体レイアウト ======== */
 body {
   margin: 0;
   padding: 0;
-  background: #fafafa;       /* ほぼ白だが紙っぽい */
-  color: #222;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
-               "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
-               "Noto Sans JP", sans-serif;
+  background: linear-gradient(to bottom, #fafafa 0%, #ffffff 100%);
+  color: #333;
+  font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
   text-align: center;
+  line-height: 1.75;
 }
 
-/* ロゴ */
+/* 中央カラム（上質なサイトみたいに中央に寄せる） */
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ======== ロゴ部分 ======== */
+header {
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+
+/* ロゴ画像 */
 .logo {
-  width: min(90%, 420px);
-  margin: 70px auto 40px;
+  width: 320px;    /* 大きすぎず美しいバランス */
+  margin: 0 auto 25px;
   display: block;
 }
 
-/* メニュー部分 */
+/* ロゴ下の細い線（高級感の秘密） */
+header::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.18);
+  margin: 25px auto 0;
+}
+
+/* ======== ナビゲーション ======== */
 nav {
   display: flex;
   justify-content: center;
   gap: 3rem;
-  margin-top: 20px;
+  margin: 30px auto 45px;
+  padding: 15px 0;
+
+  /* メニュー上下の極薄いライン → “完成されたUI感” */
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 nav a {
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   letter-spacing: 0.03em;
   text-decoration: none;
-  color: #444;
+  color: #555;
   font-weight: 400;
   position: relative;
   padding-bottom: 4px;
+  transition: color 0.2s ease;
 }
 
-/* 下にうっすら線が出るミニマル演出 */
+/* 下線アニメ（細くて上品） */
 nav a::after {
   content: "";
   position: absolute;
-  left: 0; bottom: 0;
+  left: 0;
+  bottom: 0;
   width: 100%;
   height: 1px;
-  background: #ccc;
+  background: #999;
   opacity: 0;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s ease;
+}
+
+nav a:hover {
+  color: #111;
 }
 
 nav a:hover::after {
   opacity: 1;
+}
+
+/* ======== 今後ページ追加する時に効く基本 ======== */
+main {
+  padding: 30px 0 80px;
+}
+
+footer {
+  padding: 40px 0 20px;
+  color: #aaa;
+  font-size: 0.8rem;
 }
