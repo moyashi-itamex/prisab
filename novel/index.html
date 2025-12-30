@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Novel | 沈黙の姫と彷徨う刃</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1 class="page-title">Novel</h1>
+</header>
+
+<main class="novel-container">
+
+  <!-- 1章 ------------------------------------------------- -->
+  <section class="chapter-block">
+    <h2 class="chapter-title">1章　Ignition</h2>
+    <p class="summary">
+      彼女と刃の旅が始まる幕開けの章。<br>
+      沈黙の姫と流浪の青年が出会い、<br>
+      まだ名もない感情が揺れ始める。
+    </p>
+
+    <button class="toggle-btn" data-target="c1">▶ 話数一覧</button>
+    <ul id="c1" class="episode-list">
+      <li><a href="#">第一話　</a></li>
+      <li><a href="#">第二話　</a></li>
+      <li><a href="#">第三話　</a></li>
+    </ul>
+  </section>
+
+  <!-- 2章 ------------------------------------------------- -->
+  <section class="chapter-block">
+    <h2 class="chapter-title">2章　Gravity</h2>
+    <p class="summary">
+      互いの重力に抗えず、少しずつ距離が縮まっていく章。<br>
+      束縛と自由、罪と赦し――  
+      まだ名前のない想いが輪郭を帯びていく。
+    </p>
+
+    <button class="toggle-btn" data-target="c2">▶ 話数一覧</button>
+    <ul id="c2" class="episode-list">
+      <li><a href="#">第一話</a></li>
+      <li><a href="#">第二話</a></li>
+      <li><a href="#">第三話</a></li>
+    </ul>
+  </section>
+
+  <!-- 3章 ------------------------------------------------- -->
+  <section class="chapter-block">
+    <h2 class="chapter-title">3章　Longing</h2>
+    <p class="summary">
+      逸る想いと焦がれる心。<br>
+      ふたりの感情が静かに、しかし確かに変質していく章。
+    </p>
+
+    <button class="toggle-btn" data-target="c3">▶ 話数一覧</button>
+    <ul id="c3" class="episode-list">
+      <li><a href="#">第一話</a></li>
+      <li><a href="#">第二話</a></li>
+    </ul>
+  </section>
+
+</main>
+
+<script>
+document.querySelectorAll(".toggle-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const target = document.getElementById(btn.dataset.target);
+    const isOpen = target.classList.toggle("open");
+    btn.textContent = (isOpen ? "▼" : "▶") + " 話数一覧";
+  });
+});
+</script>
+
+</body>
+</html>
 
