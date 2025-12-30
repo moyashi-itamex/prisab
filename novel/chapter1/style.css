@@ -36,6 +36,7 @@
 
 /* 本文 ----------------------------------------------- */
 .novel-body {
+  white-space: pre-wrap;
   font-size: 1.05rem;
   line-height: 1.9;
   color: #333;
