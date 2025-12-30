@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>第○話 | 沈黙の姫と彷徨う刃</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<main class="novel-page">
+
+  <h1 class="novel-title">第○話　ここに話タイトル</h1>
+
+  <!-- 上ナビ -->
+  <nav class="novel-nav top-nav">
+    <a href="prev.html" class="nav-btn prev">← Back</a>
+    <a href="../novel.html" class="nav-btn top">▲ Top</a>
+    <a href="next.html" class="nav-btn next">Next →</a>
+  </nav>
+
+  <article class="novel-body">
+    <p>
+      ここに本文が入ります。<br>
+      開業などは適宜調整してください。
+    </p>
+  </article>
+
+  <!-- 下ナビ（同じ構造） -->
+  <nav class="novel-nav bottom-nav">
+    <a href="prev.html" class="nav-btn prev">← Back</a>
+    <a href="../novel.html" class="nav-btn top">▲ Top</a>
+    <a href="next.html" class="nav-btn next">Next →</a>
+  </nav>
+
+</main>
+
+<script>
+// Back / Next を自動で消す（リンクが "#" の場合）
+document.querySelectorAll(".nav-btn").forEach(btn => {
+  if (btn.getAttribute("href") === "#" || btn.getAttribute("href") === "") {
+    btn.style.display = "none";
+  }
+});
+</script>
+
+</body>
+</html>
+
