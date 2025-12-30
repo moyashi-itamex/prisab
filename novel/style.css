@@ -45,16 +45,18 @@ body {
 /* ボタン -------------------------------------------------- */
 .toggle-btn {
   background: none;
-  border: none;
+  border: 1px solid #999;
   font-size: 1rem;
   color: #444;
   cursor: pointer;
-  padding: 4px 0;
+  padding: 4px 14px;
+  border-radius: 4px;
   margin-bottom: 14px;
 }
 
 .toggle-btn:hover {
   color: #222;
+  border-color: #666;
 }
 
 /* 話数リスト --------------------------------------------- */
@@ -69,34 +71,33 @@ body {
   display: block;
 }
 
+/* ←重要！番号とタイトルを横並びにする */
 .episode-list li {
-  margin: 10px 0;
-}
-
-.episode-list a {
-  text-decoration: none;
-  color: #555;
-  font-size: 0.96rem;
-  letter-spacing: 0.02em;
-}
-
-.episode-list a:hover {
-  color: #111;
-}
-.chapter-episodes li {
   display: flex;
-  gap: 0.8em;
-  margin: 6px 0;
-  font-size: 0.95rem;
+  gap: 1em;
+  margin: 10px 0;
+  font-size: 0.98rem;
   line-height: 1.6;
+  justify-content: center;  /* 全体を中央寄せ */
 }
 
 .episode-num {
-  width: 4.5em;
+  width: 4.6em;   /* 「第一話」などの幅を揃える */
   flex-shrink: 0;
+  text-align: right;
   color: #444;
 }
 
 .episode-title {
   flex: 1;
+  text-align: left;
+}
+
+.episode-title a {
+  text-decoration: none;
+  color: #555;
+}
+
+.episode-title a:hover {
+  color: #111;
 }
