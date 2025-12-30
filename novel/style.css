@@ -119,19 +119,19 @@ body {
   background: rgba(255, 255, 255, 1);
   border-color: rgba(160,130,70,0.9);
 }
-/* 共通デザイン */
+/* ボタン共通デザイン */
 #backToTop,
 #backToHome {
   position: fixed;
   padding: 10px 14px;
   font-size: 0.85rem;
   background: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(160,130,70,0.45); /* 薄金ライン */
+  border: 1px solid rgba(160,130,70,0.45);
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.12);
   cursor: pointer;
-  opacity: 0;
-  pointer-events: none;
+  opacity: 0;               /* 初期非表示 */
+  pointer-events: none;     /* 初期はクリック不可 */
   transition: opacity 0.3s, transform 0.3s;
   z-index: 999;
 }
@@ -148,7 +148,7 @@ body {
   right: 22px;
 }
 
-/* ボタン出現時 */
+/* ▼▼ 出現時（最終的に勝つ指定！） ▼▼ */
 #backToTop.show,
 #backToHome.show {
   opacity: 1;
@@ -161,3 +161,4 @@ body {
   background: rgba(255,255,255,1);
   border-color: rgba(160,130,70,0.9);
 }
+
