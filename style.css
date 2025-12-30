@@ -1,0 +1,52 @@
+/* 全体のベース */
+body {
+  margin: 0;
+  padding: 0;
+  background: #fafafa;       /* ほぼ白だが紙っぽい */
+  color: #222;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+               "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+               "Noto Sans JP", sans-serif;
+  text-align: center;
+}
+
+/* ロゴ */
+.logo {
+  width: min(90%, 420px);
+  margin: 70px auto 40px;
+  display: block;
+}
+
+/* メニュー部分 */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 20px;
+}
+
+nav a {
+  font-size: 1.1rem;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  color: #444;
+  font-weight: 400;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+/* 下にうっすら線が出るミニマル演出 */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: #ccc;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+nav a:hover::after {
+  opacity: 1;
+}
