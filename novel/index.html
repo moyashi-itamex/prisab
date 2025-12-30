@@ -112,7 +112,23 @@ document.querySelectorAll(".toggle-btn").forEach(btn => {
 </script>
 
 <button id="backToTop">▲ Top</button>
-  
+ <button id="backToTop">▲ Top</button>
+
+  <script>
+    document.addEventListener("scroll", () => {
+      const btn = document.getElementById("backToTop");
+      if (window.scrollY > 200) {
+        btn.classList.add("show");
+      } else {
+        btn.classList.remove("show");
+      }
+    });
+
+    document.getElementById("backToTop").addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+
 </body>
 </html>
 
