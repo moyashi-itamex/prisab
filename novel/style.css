@@ -83,3 +83,20 @@ body {
 .episode-list a:hover {
   color: #111;
 }
+.chapter-episodes li {
+  display: flex;
+  gap: 0.8em;
+  margin: 6px 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.episode-num {
+  width: 4.5em;
+  flex-shrink: 0;
+  color: #444;
+}
+
+.episode-title {
+  flex: 1;
+}
