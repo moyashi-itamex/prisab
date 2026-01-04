@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>第1話 | 夜に沈む賞金と、声を失くした王女</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+<main class="novel-page">
+
+  <h1 class="novel-title">第1話　夜に沈む賞金と、声を失くした王女</h1>
+
+  <!-- 上ナビ -->
+  <nav class="novel-nav top-nav">
+    <a href="#" class="nav-btn prev">← Back</a>
+    <a href="../index.html" class="nav-btn top">▲ Top</a>
+    <a href="ep02.html" class="nav-btn next">Next →</a>
+  </nav>
+
+<article class="novel-body">
+ここに本文
+  </article>
+
+  <!-- 下ナビ（同じ構造） -->
+  <nav class="novel-nav bottom-nav">
+    <a href="#" class="nav-btn prev">← Back</a>
+    <a href="../index.html" class="nav-btn top">▲ Top</a>
+    <a href="ep02.html" class="nav-btn next">Next →</a>
+  </nav>
+
+</main>
+
+<script>
+// Back / Next を自動で消す（リンクが "#" の場合）
+document.querySelectorAll(".nav-btn").forEach(btn => {
+  if (btn.getAttribute("href") === "#" || btn.getAttribute("href") === "") {
+    btn.style.display = "none";
+  }
+});
+</script>
+
+</body>
+</html>
