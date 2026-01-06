@@ -23,29 +23,4 @@
     </li>
   </ul>
 </div>
-<script>
-// ▼▼ スクロール時ボタン表示 ▼▼
-document.addEventListener("scroll", () => {
-  const topBtn = document.getElementById("backToTop");
-  const homeBtn = document.getElementById("backToHome");
-
-  if (window.scrollY > 50) {
-    topBtn.classList.add("show");
-    homeBtn.classList.add("show");
-  } else {
-    topBtn.classList.remove("show");
-    homeBtn.classList.remove("show");
-  }
-});
-
-// ▼▼ TOPへ戻る ▼▼
-document.getElementById("backToTop").addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
-
-// ▼▼ HOMEへ戻る ▼▼
-document.getElementById("backToHome").addEventListener("click", () => {
-  window.location.href = "../index.html";
-});  
-</script>
 <div class="bottom-space"></div>
