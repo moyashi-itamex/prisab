@@ -1,1 +1,103 @@
+/* ---------------------------------------
+   0. ページ全体のベース（index と統一）
+--------------------------------------- */
+body {
+  margin: 0;
+  padding: 0;
+  background: #fafafa;
+  color: #222;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+               "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN",
+               "Noto Sans JP", sans-serif;
+  text-align: center;
+
+  /* index と同じ “高級紙の影” 表現 */
+  box-shadow:
+    inset 40px 0 60px -60px rgba(0,0,0,0.05),
+    inset -40px 0 60px -60px rgba(0,0,0,0.05);
+}
+
+/* ---------------------------------------
+   1. About タイトル
+--------------------------------------- */
+.about-title {
+  font-size: 2rem;
+  letter-spacing: 0.08em;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+/* index の金ラインを流用 */
+.about-line {
+  width: 60px;
+  height: 2px;
+  margin: 0 auto 40px;
+  background: linear-gradient(90deg, #d1b892, #f4e8c9, #d1b892);
+  border-radius: 2px;
+  opacity: 0.85;
+}
+
+/* ---------------------------------------
+   2. About 本文
+--------------------------------------- */
+.about-text {
+  width: min(90%, 720px);
+  margin: 0 auto 40px;
+  line-height: 1.9;
+  font-size: 1rem;
+  color: #444;
+  text-align: left;       /* ここは左寄せ推奨 */
+}
+
+/* ---------------------------------------
+   3. Profile セクション
+--------------------------------------- */
+.profile-section {
+  width: min(90%, 720px);
+  margin: 40px auto;
+  text-align: left;
+}
+
+/* 見出しを金ラインと合わせて上品に */
+.profile-title {
+  font-size: 1.3rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.profile-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1.9;
+}
+
+.profile-list li {
+  margin-bottom: 8px;
+  color: #444;
+}
+
+/* ---------------------------------------
+   4. リンクスタイル
+--------------------------------------- */
+.profile-list a {
+  color: #444;
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 2px;
+  transition: opacity 0.2s;
+}
+
+.profile-list a:hover {
+  opacity: 0.6;
+}
+
+/* ---------------------------------------
+   5. 下部余白
+--------------------------------------- */
+.bottom-space {
+  height: 80px;
+}
 
