@@ -1,1 +1,17 @@
+const systemCards = [
+  { time: "MORNING", label: "朝", text: "会話を選んで、一日のはじまりを一緒に過ごす。", tone: "sun" },
+  { time: "DAYTIME", label: "昼", text: "弓の訓練やお手伝い、自由行動で距離を縮める。", tone: "sky" },
+  { time: "NIGHT", label: "夜", text: "焚き火を囲み、いつもより少し素直な時間を。", tone: "night" },
+];
 
+export default function Home() {
+  return <main>
+    <header className="hero"><div className="dot-field" aria-hidden="true" /><p className="eyebrow">PRINCESS × BOUNTY HUNTER</p><h1><span>沈黙の姫と</span><strong>メロメロ大作戦</strong></h1><p className="hero-copy">無愛想な剣士を、<em>7日間</em>でどこまでメロメロにできる？</p><div className="mini-status" aria-label="ゲーム概要"><span>短編</span><span>コミュニケーションゲーム</span><span>マルチエンディング</span></div></header>
+    <section className="section story"><SectionTitle en="STORY" jp="あらすじ" /><div className="story-card"><span className="quote-mark">“</span><p>プレイヤーはエレナシアとなり、ルードと7日間を過ごします。</p><p>朝・昼・夜の行動を選び、好感度を上げ、警戒心をほどき、ときには理性を削っていきましょう。</p><p>あなたの選択によって、ぶっきらぼうなルードとの距離や、迎える結末が変化します。</p><p>素直に甘える天使になるも、彼を困らせる小悪魔になるも、あなた次第。</p><p>ただし、ルードを信じていないような行動を取ると、彼は拗ねてしまうかもしれません。</p><p className="story-lead">無愛想で警戒心の強い剣士を、<br />どこまでメロメロにできるのか――。</p><p>エレナシア視点で楽しむ、短編コミュニケーションゲームです。</p></div></section>
+    <section className="section system"><SectionTitle en="GAME SYSTEM" jp="ゲームシステム" /><p className="section-intro">朝・昼・夜。選んだ行動が、ふたりの距離を少しずつ変えていきます。</p><div className="system-grid">{systemCards.map(c=><article className={`system-card ${c.tone}`} key={c.time}><div className="screen-placeholder"><span>GAME SCREEN</span></div><p className="time">{c.time}</p><h3>{c.label}</h3><p>{c.text}</p></article>)}</div><div className="parameters"><p>変化する3つのパラメータ</p><div><span>♡ 好感度</span><span>♢ 警戒心</span><span>♧ 理性</span></div></div></section>
+    <section className="section characters"><SectionTitle en="CHARACTERS" jp="キャラクター" /><Character name="エレナシア" en="ELENASIA" role="沈黙の姫" side="left">王女。話すことができないため、筆談で会話する。<br /><br />ある出来事をきっかけにルードと行動を共にし、今では彼に強い信頼を寄せている。素直で好奇心旺盛。ルードが何を考えているのか気になって仕方がなく、今日もあの手この手で距離を縮めようとする。<br /><br />少し食いしん坊で、スキンシップは動物的。</Character><Character name="ルード" en="RUDE" role="ぶっきらぼうな剣士" side="right">剣を生業にする、ぶっきらぼうな男。<br /><br />エレナシアに惹かれているものの、本人は理性で必死に誤魔化している。エレナシアを大事にしすぎるあまり過保護気味だが、その自覚はない。<br /><br />自由すぎるエレナシアに、今日も頭を抱えている。</Character></section>
+    <footer><p>沈黙の姫とメロメロ大作戦</p><span>© 萌ヶ原　炒芽</span></footer>
+  </main>;
+}
+function SectionTitle({en,jp}:{en:string;jp:string}){return <div className="section-title"><span>{en}</span><h2>{jp}</h2></div>}
+function Character({name,en,role,side,children}:{name:string;en:string;role:string;side:string;children:React.ReactNode}){return <article className={`character ${side}`}><div className="portrait-placeholder"><span>CHARACTER<br/>IMAGE</span></div><div className="character-copy"><p className="character-en">{en}</p><h3>{name}</h3><p className="role">{role}</p><div className="profile">{children}</div></div></article>}
