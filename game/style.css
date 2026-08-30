@@ -17,7 +17,6 @@
   overflow: hidden;
 }
 
-.character .elenacia-portrait {
   background-image:
     url("elenacia.png"),
     linear-gradient(160deg, #eee8f5, #d6c5e6);
@@ -26,11 +25,23 @@
   background-size: contain, cover;
 }
 
-.character .lude-portrait {
   background-image:
     url("lude.png"),
     linear-gradient(160deg, #d8d2e3, #9a8ca6);
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: contain, cover;
+}
+.character.left .elenacia-portrait {
+  background:
+    url("elenacia.png") center bottom / auto 92% no-repeat,
+    linear-gradient(160deg, #eee8f5, #d6c5e6) center / cover no-repeat
+    !important;
+}
+
+.character.right .lude-portrait {
+  background:
+    url("lude.png") center bottom / auto 92% no-repeat,
+    linear-gradient(160deg, #d8d2e3, #9a8ca6) center / cover no-repeat
+    !important;
 }
