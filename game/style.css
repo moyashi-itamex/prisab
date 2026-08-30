@@ -13,19 +13,17 @@
 .portrait-placeholder {
   overflow: hidden;
 }
-
 .portrait-placeholder {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  position: relative;
   overflow: hidden;
 }
 
 .characters .portrait-placeholder img {
+  position: absolute;
+  inset: 0;
   display: block;
-  width: auto !important;
+  width: 100% !important;
   height: 100% !important;
-  max-width: 100% !important;
-  object-fit: contain;
-  object-position: center bottom;
+  object-fit: contain !important;
+  object-position: center bottom !important;
 }
