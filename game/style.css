@@ -56,3 +56,10 @@
 .character.right .portrait-placeholder {
   justify-self: start;
 }
+.elenacia-portrait {
+  background-image:
+    url("elenacia.png"),
+    linear-gradient(160deg, #eee8f5, #d6c5e6) !important;
+  background-repeat: no-repeat, no-repeat !important;
+  background-position: center bottom, center !important;
+  background-size: auto 92%, cover !important;
