@@ -39,3 +39,22 @@
 .character.right .portrait-placeholder {
   justify-self: start;
 }
+.story-dialogue {
+  margin: 28px 0 !important;
+  padding-left: 20px;
+  border-left: 3px solid var(--pink);
+  font-family: "Yu Mincho", serif;
+  font-size: 17px;
+  color: var(--deep);
+}
+
+.story-objective {
+  margin: 30px 0 !important;
+  text-align: center;
+  color: var(--deep);
+  line-height: 2.2;
+}
+
+.story-objective strong {
+  font-family: "Yu Mincho", serif;
+}
