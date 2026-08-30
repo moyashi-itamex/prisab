@@ -10,28 +10,11 @@
   height: 100%;
   object-fit: cover;
 }
-.portrait-placeholder {
-  overflow: hidden;
-}
+
 .portrait-placeholder {
   overflow: hidden;
 }
 
-  background-image:
-    url("elenacia.png"),
-    linear-gradient(160deg, #eee8f5, #d6c5e6);
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: contain, cover;
-}
-
-  background-image:
-    url("lude.png"),
-    linear-gradient(160deg, #d8d2e3, #9a8ca6);
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: contain, cover;
-}
 .character.left .elenacia-portrait {
   background:
     url("elenacia.png") center bottom / auto 92% no-repeat,
@@ -56,10 +39,3 @@
 .character.right .portrait-placeholder {
   justify-self: start;
 }
-.elenacia-portrait {
-  background-image:
-    url("elenacia.png"),
-    linear-gradient(160deg, #eee8f5, #d6c5e6) !important;
-  background-repeat: no-repeat, no-repeat !important;
-  background-position: center bottom, center !important;
-  background-size: auto 92%, cover !important;
