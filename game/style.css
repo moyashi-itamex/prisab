@@ -14,16 +14,23 @@
   overflow: hidden;
 }
 .portrait-placeholder {
-  position: relative;
   overflow: hidden;
 }
 
-.characters .portrait-placeholder img {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: contain !important;
-  object-position: center bottom !important;
+.character .elenacia-portrait {
+  background-image:
+    url("elenacia.png"),
+    linear-gradient(160deg, #eee8f5, #d6c5e6);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain, cover;
+}
+
+.character .lude-portrait {
+  background-image:
+    url("lude.png"),
+    linear-gradient(160deg, #d8d2e3, #9a8ca6);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain, cover;
 }
