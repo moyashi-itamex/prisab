@@ -45,3 +45,14 @@
     linear-gradient(160deg, #d8d2e3, #9a8ca6) center / cover no-repeat
     !important;
 }
+.character .portrait-placeholder {
+  width: min(100%, 380px);
+}
+
+.character.left .portrait-placeholder {
+  justify-self: end;
+}
+
+.character.right .portrait-placeholder {
+  justify-self: start;
+}
