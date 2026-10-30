@@ -58,3 +58,127 @@
 .story-objective strong {
   font-family: "Yu Mincho", serif;
 }
+
+
+/* ===== CV・ボイスサンプル（追加部分） ===== */
+.character-name-line {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  column-gap: 17px;
+  row-gap: 2px;
+}
+.character-name-line h3 { margin: 4px 0; }
+.character-cv {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .02em;
+  color: var(--deep);
+  white-space: nowrap;
+}
+.character-cv a, .recording-studio a {
+  color: inherit;
+  text-decoration-line: underline;
+  text-decoration-color: var(--purple);
+  text-underline-offset: 4px;
+}
+.character-cv a:hover, .recording-studio a:hover { color: #a14f80; }
+
+.voice-samples {
+  padding-top: 32px;
+  padding-bottom: 105px;
+}
+.voice-samples .section-title { margin-bottom: 22px; }
+.voice-intro {
+  margin: 0 auto 38px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.9;
+}
+.voice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 27px;
+  align-items: start;
+}
+.voice-card {
+  padding: 18px;
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: 8px 8px 0 #e8ddf3;
+  min-width: 0;
+}
+.voice-card-main {
+  grid-column: 1 / -1;
+  width: 100%;
+  max-width: 780px;
+  justify-self: center;
+}
+.voice-card-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 12px;
+  padding: 2px 2px 13px;
+}
+.voice-index {
+  color: var(--purple);
+  letter-spacing: .16em;
+  font: 800 11px/1.5 Arial, sans-serif;
+}
+.voice-card h3 {
+  margin: 0;
+  font: 700 21px/1.4 "Yu Mincho", "Hiragino Mincho ProN", serif;
+  color: var(--deep);
+}
+.voice-card video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  background: #211a2d;
+  object-fit: contain;
+  border: 1px solid #ded7e7;
+}
+.recording-studio {
+  max-width: 780px;
+  margin: 68px auto 0;
+  padding: 28px 25px 30px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--pink);
+}
+.recording-label {
+  margin: 0 0 11px;
+  color: var(--purple);
+  font: 800 11px/1.4 Arial, sans-serif;
+  letter-spacing: .2em;
+}
+.recording-name {
+  margin: 0 0 9px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.7;
+}
+.recording-links {
+  margin: 0;
+  font-size: 13px;
+  color: var(--deep);
+  line-height: 1.8;
+}
+.recording-separator { color: var(--line); padding: 0 4px; }
+@media (max-width: 720px) {
+  .character-name-line { align-items: baseline; column-gap: 12px; }
+  .character-cv { font-size: 12px; }
+  .voice-samples { padding-top: 12px; padding-bottom: 80px; }
+  .voice-grid { grid-template-columns: 1fr; gap: 24px; }
+  .voice-card-main { grid-column: auto; max-width: none; }
+  .voice-card { padding: 12px; box-shadow: 5px 5px 0 #e8ddf3; }
+  .voice-card h3 { font-size: 19px; }
+  .voice-intro { font-size: 13px; }
+  .recording-studio { margin-top: 46px; padding: 25px 16px; }
+  .recording-separator { display: none; }
+  .recording-links a { display: block; }
+}
